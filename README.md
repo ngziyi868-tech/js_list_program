@@ -1,0 +1,1 @@
+Now that I've inserted the project files I will start by adding the product names to an array.
