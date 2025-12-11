@@ -5,15 +5,20 @@ productArray = [];
 function addProduct() {
   // Assignment 1
   // You need to change the id that this collects to product.
-  let input = document.getElementById("input").value;
+  let input = document.getElementById("product").value;
   // You will need to create a div using javascript,
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
-
+    let div = document.createElement("div")
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
+    let output = document.getElementById("output")
   // Except you do not need to include the value at the end.
 
   // CHALLENGE SECTION:
+  if(input === "") {
+    alert("Input invalid, retry.");
+    return false;
+  }
   // If you feel up for a challenge, try and use an if statement if(condition){run this code}
   // to return an alert if the input is empty. You will need to get the id as in previous assignments above
   // and then get the value at the end and check if they are strictly equal to an empty string.
@@ -25,7 +30,9 @@ function addProduct() {
   // You need to put the value of the input into an array to call later.
   // That means you will need to assign your input using brackets around it
   // to a newProduct variable, remember that assign can mean the equals sign(=).
-  let newProduct = { input };
+  let newProduct = { product: input };
+  productArray.push(newProduct);
+  console.log(productArray)
   // Hint: You could push your product to a new array once you create a new variable
   // that makes a single object {} with the product variable you made above.
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
