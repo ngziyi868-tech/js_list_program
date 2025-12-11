@@ -32,7 +32,7 @@ function addProduct() {
   // to a newProduct variable, remember that assign can mean the equals sign(=).
   let newProduct = { product: input };
   productArray.push(newProduct);
-  console.log(product)
+  console.log(productArray)
   // Hint: You could push your product to a new array once you create a new variable
   // that makes a single object {} with the product variable you made above.
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
@@ -53,7 +53,8 @@ function addProduct() {
   // set the div.textContent equal to the the array index number [i] and dot notation of the product
   // `${productArray[i].your input}`
   for (let i = 0; i < productArray.length; i++) {
-    itemDiv.textContent = '${productArray[i].product}';
+    let itemDiv = document.createElement("div")
+    itemDiv.textContent = `${productArray[i].product}`;
     output.appendChild(itemDiv);
   }
   // finally use the appendChild method from the output variable you had from earlier.
